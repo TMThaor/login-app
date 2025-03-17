@@ -24,7 +24,7 @@ const ChangePasswordSuccess = () => {
     <div className="fixed inset-0 flex justify-center items-center bg-black/40 z-50">
       <div className=" flex flex-col gap-4 w-162 h-64 border-solid border-gray-300 border-[2px] bg-white items-center justify-center">
         <Image
-          src="/images/dialogs/successIcon.png"
+          src="images/dialogs/successIcon.png"
           width={58}
           height={48}
           alt=""

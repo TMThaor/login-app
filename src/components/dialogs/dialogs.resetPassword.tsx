@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { z, ZodType } from "zod";
 
 export default function ResetPassword() {
-  const { setStep, otp, username } = useForgotPassword();
+  const { setStep, otp, setOtp, username } = useForgotPassword();
   const schema: ZodType<ResetPasswordForm> = z
     .object({
       password: z
@@ -29,6 +29,15 @@ export default function ResetPassword() {
   } = useForm<ResetPasswordForm>({ resolver: zodResolver(schema) });
 
   const onsubmit = async (data: ResetPasswordForm) => {
+    console.log(
+      username,
+      " -",
+      otp,
+      " -",
+      data.password,
+      " -",
+      data.confirmPassword
+    );
     const res = await changePassword(
       username,
       otp,
@@ -42,7 +51,10 @@ export default function ResetPassword() {
   return (
     <div
       className="fixed inset-0 flex justify-center items-center bg-black/40 z-50"
-      onClick={() => setStep(0)}
+      onClick={() => {
+        setOtp("");
+        setStep(0);
+      }}
     >
       <div
         className="w-140 h-85 border-solid border-black border-[1px] bg-[#F7F8F9]"
@@ -52,9 +64,10 @@ export default function ResetPassword() {
           <p className="ml-[18px]">THIẾT LẬP MẬT KHẨU MỚI</p>
           <Image
             onClick={() => {
+              setOtp("");
               setStep(0);
             }}
-            src="/images/dialogs/quit_icon.png"
+            src="images/dialogs/quit_icon.png"
             width={24}
             height={24}
             alt=""

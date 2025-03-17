@@ -13,7 +13,7 @@ const RegisterSuccess = ({ onClose }: { onClose: () => void }) => {
     <div className="fixed inset-0 flex justify-center items-center bg-black/40 z-50">
       <div className=" flex flex-col gap-4 w-140 h-82 border-solid border-gray-300 border-[2px] bg-white items-center justify-center">
         <Image
-          src="/images/dialogs/successIcon.png"
+          src="images/dialogs/successIcon.png"
           width={64}
           height={64}
           alt=""

@@ -8,7 +8,7 @@ export default function OurServices() {
       </h1>
       <div className="viaExpress flex flex-col items-center justify-center col-span-1 bg-white h-[99px]">
         <Image
-          src="/images/ourServices/via_express.png"
+          src="images/ourServices/via_express.png"
           width={40}
           height={40}
           alt=""
@@ -17,7 +17,7 @@ export default function OurServices() {
       </div>
       <div className="viaFast flex flex-col items-center justify-center col-span-1 bg-white h-[99px]">
         <Image
-          src="/images/ourServices/via_fast.png"
+          src="images/ourServices/via_fast.png"
           width={40}
           height={40}
           alt=""
@@ -26,7 +26,7 @@ export default function OurServices() {
       </div>
       <div className="viaSuper flex flex-col items-center justify-center col-span-1 bg-white h-[99px]">
         <Image
-          src="/images/ourServices/via_super.png"
+          src="images/ourServices/via_super.png"
           width={40}
           height={40}
           alt=""
@@ -35,7 +35,7 @@ export default function OurServices() {
       </div>
       <div className="viaFresh flex flex-col items-center justify-center col-span-1 bg-white h-[99px]">
         <Image
-          src="/images/ourServices/via_fresh.png"
+          src="images/ourServices/via_fresh.png"
           width={40}
           height={40}
           alt=""
@@ -44,7 +44,7 @@ export default function OurServices() {
       </div>
       <div className="viaInternational flex flex-col items-center justify-center col-span-2 bg-white h-[99px]">
         <Image
-          src="/images/ourServices/via_international.png"
+          src="images/ourServices/via_international.png"
           width={40}
           height={40}
           alt=""

@@ -190,14 +190,14 @@ function SignUpForm() {
             >
               {visiblePassword.password ? (
                 <Image
-                  src="/images/dialogs/eye-regular.png"
+                  src="images/dialogs/eye-regular.png"
                   width={24}
                   height={24}
                   alt=""
                 ></Image>
               ) : (
                 <Image
-                  src="/images/dialogs/eye-slat.png"
+                  src="images/dialogs/eye-slat.png"
                   width={24}
                   height={24}
                   alt=""
@@ -226,14 +226,14 @@ function SignUpForm() {
             >
               {visiblePassword.confirmPassword ? (
                 <Image
-                  src="/images/dialogs/eye-regular.png"
+                  src="images/dialogs/eye-regular.png"
                   width={24}
                   height={24}
                   alt=""
                 ></Image>
               ) : (
                 <Image
-                  src="/images/dialogs/eye-slat.png"
+                  src="images/dialogs/eye-slat.png"
                   width={24}
                   height={24}
                   alt=""

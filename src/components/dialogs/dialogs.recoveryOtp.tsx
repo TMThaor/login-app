@@ -42,23 +42,16 @@ const RecoveryOTP = () => {
   const handleSubmitOTP = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setOtp(inputOtp.join("")); // Cập nhật state otp mới
-  };
-
-  // Gọi API validateOTP sau khi otp được cập nhật
-  useEffect(() => {
-    setOtp("");
-    const validate = async () => {
-      if (otp.length === 6) {
-        const data = await validateOTP(username, otp);
-        if (data?.content) {
-          setStep(3);
-        } else {
-          setError(false);
-        }
+    if (otp.length === 6) {
+      const data = await validateOTP(username, otp);
+      if (data?.content) {
+        console.log("+++", otp);
+        setStep(3);
+      } else {
+        setError(false);
       }
-    };
-    validate();
-  }, [setOtp, username, setStep, otp]);
+    }
+  };
 
   const Ref = useRef<NodeJS.Timeout | null>(null);
 
@@ -125,7 +118,10 @@ const RecoveryOTP = () => {
   return (
     <div
       className="fixed inset-0 flex justify-center items-center bg-black/40 z-50"
-      onClick={() => setStep(0)}
+      onClick={() => {
+        setOtp("");
+        setStep(0);
+      }}
     >
       <div
         className="w-140 h-95 border-solid border-black border-[1px] bg-white"
@@ -134,8 +130,11 @@ const RecoveryOTP = () => {
         <div className="flex h-18 bg-[#F7F8F9] items-center justify-between">
           <p className="ml-[18px] text-2xl font-bold">NHẬP MÃ OTP</p>
           <Image
-            onClick={() => setStep(0)}
-            src="/images/dialogs/quit_icon.png"
+            onClick={() => {
+              setOtp("");
+              setStep(0);
+            }}
+            src="images/dialogs/quit_icon.png"
             width={24}
             height={24}
             alt=""

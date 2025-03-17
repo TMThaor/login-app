@@ -10,7 +10,7 @@ const AccountCenter = () => {
         <p className="font-semibold text-white text-[18px]">Xin chào bạn</p>
         <p className="text-white">{userInformation?.content?.shopName}</p>
         <Image
-          src="/images/banner/avatar.png"
+          src="images/banner/avatar.png"
           width={102}
           height={107}
           alt=""

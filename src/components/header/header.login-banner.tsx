@@ -11,7 +11,7 @@ function Banner() {
       />
       <Image
         className="absolute top-[-10] left-[-20]"
-        src="/images/banner/logo nen toi 1.png"
+        src="images/banner/logo nen toi 1.png"
         alt=""
         width={271}
         height={271}

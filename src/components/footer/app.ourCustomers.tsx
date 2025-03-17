@@ -9,49 +9,49 @@ export default function OurCustomer() {
         <div className="ourCustomer flex gap-13 h-[50px] items-center">
           <div>
             <Image
-              src="/images/customers/left.png"
+              src="images/customers/left.png"
               width={32}
               height={32}
               alt=""
             ></Image>
           </div>
           <Image
-            src="/images/customers/tiktok.png"
+            src="images/customers/tiktok.png"
             width={149}
             height={50}
             alt=""
             className="h-full object-contain"
           ></Image>
           <Image
-            src="/images/customers/upos.png"
+            src="images/customers/upos.png"
             width={131}
             height={45}
             alt=""
             className="h-full object-contain"
           ></Image>
           <Image
-            src="/images/customers/shopee.png"
+            src="images/customers/shopee.png"
             width={152}
             height={70}
             alt=""
             className=" h-full object-contain"
           ></Image>
           <Image
-            src="/images/customers/oppo.png"
+            src="images/customers/oppo.png"
             width={152}
             height={39}
             alt=""
             className="h-full  object-contain"
           ></Image>
           <Image
-            src="/images/customers/tiki.png"
+            src="images/customers/tiki.png"
             width={111}
             height={45}
             alt=""
             className="h-full  object-contain"
           ></Image>
           <Image
-            src="/images/customers/thegioididong.png"
+            src="images/customers/thegioididong.png"
             width={134}
             height={80}
             alt=""
@@ -59,7 +59,7 @@ export default function OurCustomer() {
           ></Image>
           <div>
             <Image
-              src="/images/customers/right.png"
+              src="images/customers/right.png"
               width={32}
               height={32}
               alt=""
