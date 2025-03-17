@@ -52,6 +52,7 @@ function LoginForm() {
       isValid = false;
     }
 
+    console.log(formData.password);
     if (!formData.password) {
       newErrors.password = "Vui lòng nhập mật khẩu.";
       isValid = false;
@@ -111,9 +112,12 @@ function LoginForm() {
 
             <div className=" relative flex justify-between items-center ">
               <input
+                name="password"
                 type={visiblePassword.password ? "text" : "password"}
                 className="passwordInput w-[250px] h-[44px] border-solid border-[1px] border-[#a0abbb] pr-[12px] pl-[12px] rounded-[4px] "
                 placeholder="Nhập mật khẩu..."
+                value={formData.password}
+                onChange={handleInputChange}
               />
               <div
                 className="absolute right-[10px]"
@@ -122,7 +126,7 @@ function LoginForm() {
                 {visiblePassword.password ? (
                   <Image
                     className="cursor-pointer"
-                    src="images/dialogs/eye-regular.png"
+                    src="/images/dialogs/eye-regular.png"
                     width={24}
                     height={24}
                     alt=""
@@ -130,7 +134,7 @@ function LoginForm() {
                 ) : (
                   <Image
                     className="cursor-pointer"
-                    src="images/dialogs/eye-slat.png"
+                    src="/images/dialogs/eye-slat.png"
                     width={24}
                     height={24}
                     alt=""
