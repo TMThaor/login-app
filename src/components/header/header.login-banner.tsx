@@ -3,7 +3,7 @@ function Banner() {
   return (
     <div className="flex relative justify-center items-end">
       <Image
-        src="/images/banner/headerBackground.png"
+        src="images/banner/headerBackground.png"
         className=" "
         alt=""
         width={1440}
