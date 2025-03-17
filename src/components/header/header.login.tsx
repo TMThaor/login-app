@@ -29,6 +29,8 @@ function LoginForm() {
     confirmPassword: false,
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -66,6 +68,7 @@ function LoginForm() {
     e.preventDefault();
 
     if (validateForm()) {
+      setLoading(true);
       const res = await loginRequest(formData.username, formData.password);
       if (res?.success) {
         setUserInformation(res);
@@ -126,7 +129,7 @@ function LoginForm() {
                 {visiblePassword.password ? (
                   <Image
                     className="cursor-pointer"
-                    src="images/dialogs/eye-regular.png"
+                    src="/images/dialogs/eye-regular.png"
                     width={24}
                     height={24}
                     alt=""
@@ -134,7 +137,7 @@ function LoginForm() {
                 ) : (
                   <Image
                     className="cursor-pointer"
-                    src="images/dialogs/eye-slat.png"
+                    src="/images/dialogs/eye-slat.png"
                     width={24}
                     height={24}
                     alt=""
@@ -146,12 +149,22 @@ function LoginForm() {
               {errors.password}
             </p>
           </div>
-          <button
-            className="bg-[#fdba4d] w-[120px] h-[43px] pr-[12px] pl-[12px] rounded-[4px] cursor-pointer"
-            type="submit"
-          >
-            Đăng nhập
-          </button>
+          {!loading ? (
+            <button
+              className="bg-[#fdba4d] w-[120px] h-[43px] pr-[12px] pl-[12px] rounded-[4px] cursor-pointer"
+              type="submit"
+            >
+              Đăng nhập
+            </button>
+          ) : (
+            <button
+              className="bg-[#fdba4d] w-[120px] h-[43px] pr-[12px] pl-[12px] rounded-[4px] cursor-pointer"
+              disabled={true}
+              type="submit"
+            >
+              Loading...
+            </button>
+          )}
         </form>
 
         {/* Khi bấm vào "Quên mật khẩu?", gọi setStep(1) để hiển thị RecoveryPasswordRequest */}
