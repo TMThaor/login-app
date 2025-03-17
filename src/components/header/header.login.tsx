@@ -126,7 +126,7 @@ function LoginForm() {
                 {visiblePassword.password ? (
                   <Image
                     className="cursor-pointer"
-                    src="/images/dialogs/eye-regular.png"
+                    src="images/dialogs/eye-regular.png"
                     width={24}
                     height={24}
                     alt=""
@@ -134,7 +134,7 @@ function LoginForm() {
                 ) : (
                   <Image
                     className="cursor-pointer"
-                    src="/images/dialogs/eye-slat.png"
+                    src="images/dialogs/eye-slat.png"
                     width={24}
                     height={24}
                     alt=""
